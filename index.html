@@ -1,0 +1,69 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="utf-8">
+    <title>রোবোকবি</title>
+    <!-- styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<!-- Add jQuery library -->
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+    </head>
+    <body onload="init()">
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a class="brand" href="#"><img src="img/user.jpg"/></a>
+          <ul class="nav nav-collapse pull-right">
+            <li><a href="#" class="active">রোবোকবি</a></li>
+            <li><a href="#myModal" role="button" data-toggle="modal">মস্তিষ্ক</a></li>
+			<li><a href="http://thinkzone.wlonk.com/PoemGen/PoemGen.htm" target="_blank">প্রেরণা</a></li>
+          </ul>
+          <!-- Everything you want hidden at 940px or less, place within here -->
+          <div class="nav-collapse collapse">
+            <!-- .nav, .navbar-search, .navbar-form, etc -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Profile container-->
+    <div class="container profile">
+      <div class="span8">
+		<br>
+		<div id="kobita">
+		</div>
+		<br>
+		<button type="submit" class="btn btn-large" onclick="make_poem()">Get a কবিতা </button>
+		</div>
+    </div>
+    <!--END: Profile container-->
+    <!-- Footer -->
+    <div class="footer">
+      <div class="container">
+        <p class="pull-left"><a href="">রোবোকবি</a></p>
+        <p class="pull-right"><a href="#">সোর্স কোড</a></p>
+      </div>
+    </div>
+    <!-- Contact form in Modal -->
+    <!-- Modal -->
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">মস্তিষ্ক</h3>
+      </div>
+      <div class="modal-body">
+        <form>
+          <p>আপনি চাইলে এখানে নিজের মত করে "মস্তিষ্ক" তৈরী করে নিতে পারেন।</p>
+          <textarea id="brain" rows="10" style="width:80%"></textarea>
+		  <br/>
+          <button type="submit" class="btn btn-large" data-dismiss="modal" aria-hidden="true">আচ্ছা</button>
+        </form>
+      </div>
+    </div>
+    <!-- Scripts -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="kobitajs/PoemGen.js"></script>
+    <script>
+                $('#myModal').modal('hidden')
+        </script>
+    </body>
+    </html>
